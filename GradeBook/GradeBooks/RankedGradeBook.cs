@@ -19,7 +19,10 @@ namespace GradeBook.GradeBooks
                 throw new InvalidOperationException("Ranked grading requires 5 students at minimum.");
             }
 
-            var threshold = (int)Math.Ceiling()
+            var threshold = (int)Math.Ceiling(Students.Count * .2);
+            var grades = Students.OrderBy(e => e.AverageGrade).Select(e => e.AverageGrade).ToList();
+
+            if()
             return 'F';
         }
     }
